@@ -4,30 +4,32 @@ using System.Text;
 
 namespace MasterMind.Classes
 {
-    public class Mastermind
+    public class Game
     {
-        #region Properties
+        public int NumberOfTries = 10;
 
-        public static int NumberOfTries = 10;
+        public GameInterface GI { get; }
 
-        #endregion
+        public Game(GameInterface gi)
+        {
+            this.GI = gi;
+        }
 
-        #region Methods
-        public static void Play()
+        public void Play()
         {
             int[] guess;
             int[] solution = GenerateSecretCode();
 
             while (NumberOfTries > 0) 
             {
-                guess = UI.GetGuess();
+                guess = GI.GetGuess();
                 NumberOfTries--;
                 int result = CheckGuess(guess, solution);
-                UI.PrintWinLose(result, NumberOfTries);
+                GI.PrintWinLose(result, NumberOfTries);
             }
         }
 
-        public static int CheckGuess(int[] guess, int[] solution)
+        public int CheckGuess(int[] guess, int[] solution)
         {
             int fourToWin = 0;
             string feedback = "";
@@ -60,28 +62,27 @@ namespace MasterMind.Classes
                 }
             }
 
-            UI.PrintFeedback(feedback);
+            GI.PrintFeedback(feedback);
 
             return fourToWin;
         }
 
-        private static int[] GenerateSecretCode()
+        static int[] GenerateSecretCode()
         {
             int[] fourRandomNumbers = new int[4];
             for (int i = 0; i < 4; i++)
             {
                 fourRandomNumbers[i] = RandomNumber(1, 7);
-                Console.WriteLine(fourRandomNumbers[i]);
+                Console.Write(fourRandomNumbers[i]);
             }
             return fourRandomNumbers;
         }
 
-        static private int RandomNumber(int min, int max)
+        public static int RandomNumber(int min, int max)
         {
             Random random = new Random();
             return random.Next(min, max);
         }
 
-        #endregion
     }
 }

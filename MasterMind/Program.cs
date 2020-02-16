@@ -3,7 +3,7 @@ using MasterMind.Classes;
 
 namespace MasterMind
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -18,15 +18,8 @@ namespace MasterMind
              * 4. The player has ten (10) attempts to guess the number correctly before receiving a message that they have lost.
             */
 
-            UI.Title();
-
-            //Case 1: View Instructions
-            //Case 2: Play Mastermind
-            //Case 3: Quit
-            //Case 4: View stats (x plays, 
-
-            //Mastermind mm = new Mastermind();
-            Mastermind.Play();
+            MainMenu mm = new MainMenu();
+            mm.DisplayMainMenu();
         }
 
         

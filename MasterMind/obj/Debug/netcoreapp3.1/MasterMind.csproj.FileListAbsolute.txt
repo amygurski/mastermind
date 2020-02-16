@@ -9,3 +9,25 @@ C:\Users\Student\git\amygurski-c\mastermind\MasterMind\MasterMind\obj\Debug\netc
 C:\Users\Student\git\amygurski-c\mastermind\MasterMind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfo.cs
 C:\Users\Student\git\amygurski-c\mastermind\MasterMind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.dll
 C:\Users\Student\git\amygurski-c\mastermind\MasterMind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.pdb
+C:\Users\Student\git\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.csprojAssemblyReference.cache
+C:\Users\Student\git\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfoInputs.cache
+C:\Users\Student\git\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfo.cs
+C:\Users\Student\git\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.dll
+C:\Users\Student\git\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.pdb
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.exe
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.deps.json
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.json
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.dev.json
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.dll
+C:\Users\Student\git\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.pdb
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.exe
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.deps.json
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.json
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.runtimeconfig.dev.json
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.dll
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\bin\Debug\netcoreapp3.1\MasterMind.pdb
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.csprojAssemblyReference.cache
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfoInputs.cache
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.AssemblyInfo.cs
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.dll
+C:\Users\Student\git\Side Projects\mastermind\MasterMind\obj\Debug\netcoreapp3.1\MasterMind.pdb

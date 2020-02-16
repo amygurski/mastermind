@@ -45,7 +45,7 @@ namespace MasterMind.Classes
 
             int[] inputArr = new int[4];
 
-            Console.WriteLine("\nWhat's your guess?");
+            Console.Write("\nWhat's your guess? ");
             string input = Console.ReadLine();
 
 

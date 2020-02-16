@@ -10,36 +10,31 @@ namespace MasterMind.Classes
 
         public static int NumberOfTries = 10;
 
-        public static int[] Solution {
-            get
-            {
-                return GenerateSecretCode();
-            }
-        }
         #endregion
 
         #region Methods
         public static void Play()
         {
             int[] guess;
+            int[] solution = GenerateSecretCode();
 
             while (NumberOfTries > 0) 
             {
                 guess = UI.GetGuess();
                 NumberOfTries--;
-                int result = CheckGuess(guess);
+                int result = CheckGuess(guess, solution);
                 UI.PrintWinLose(result, NumberOfTries);
             }
         }
 
-        public static int CheckGuess(int[] guess)
+        public static int CheckGuess(int[] guess, int[] solution)
         {
             int fourToWin = 0;
             string feedback = "";
 
             //Copy solution to replace matched positions with 0's
             int[] modifiedSolution = new int[4];
-            Array.Copy(Solution, modifiedSolution, Solution.Length);
+            Array.Copy(solution, modifiedSolution, solution.Length);
 
             for (int i = 0; i < guess.Length; i++) //For each number in guess
             {
@@ -76,8 +71,8 @@ namespace MasterMind.Classes
             for (int i = 0; i < 4; i++)
             {
                 fourRandomNumbers[i] = RandomNumber(1, 7);
+                Console.WriteLine(fourRandomNumbers[i]);
             }
-
             return fourRandomNumbers;
         }
 

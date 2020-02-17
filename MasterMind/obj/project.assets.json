@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Student\\git\\Side Projects\\mastermind\\MasterMind\\MasterMind.csproj",
-      "projectName": "MasterMind",
-      "projectPath": "C:\\Users\\Student\\git\\Side Projects\\mastermind\\MasterMind\\MasterMind.csproj",
+      "projectUniqueName": "C:\\Users\\Student\\git\\Side Projects\\mastermind\\MasterMind\\Game.csproj",
+      "projectName": "Game",
+      "projectPath": "C:\\Users\\Student\\git\\Side Projects\\mastermind\\MasterMind\\Game.csproj",
       "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Student\\git\\Side Projects\\mastermind\\MasterMind\\obj\\",
       "projectStyle": "PackageReference",

@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MasterMind.Classes
+namespace Game.Classes
 {
-    public class Game
+    public class MasterMind
     {
         public int NumberOfTries = 10;
 
         public GameInterface GI { get; }
 
-        public Game(GameInterface gi)
+        public MasterMind(GameInterface gi)
         {
             this.GI = gi;
         }
@@ -73,7 +71,7 @@ namespace MasterMind.Classes
             for (int i = 0; i < 4; i++)
             {
                 fourRandomNumbers[i] = RandomNumber(1, 7);
-                Console.Write(fourRandomNumbers[i]);
+                //Console.Write(fourRandomNumbers[i]); //Just for debugging
             }
             return fourRandomNumbers;
         }

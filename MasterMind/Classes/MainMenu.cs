@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MasterMind.Classes
+namespace Game.Classes
 {
     public class MainMenu
     {
@@ -28,13 +28,13 @@ namespace MasterMind.Classes
                         Console.Clear(); 
                         Title();
                         Console.WriteLine("\nI have a number in mind...");
-                        Game game = new Game(new GameInterface());
+                        MasterMind game = new MasterMind(new GameInterface());
                         game.Play();
                         break;
                     case "3":
                         keepGoing = false;
+                        Environment.Exit(0);
                         break;
-                        //TODO: Doesn't exit after a win or 10 loses
                     //TODO: Case 4: View stats (plays, wins losses)
                     default:
                         Console.WriteLine("Invalid Menu Option. Please try again.");

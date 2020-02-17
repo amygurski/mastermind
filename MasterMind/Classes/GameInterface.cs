@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MasterMind.Classes
+namespace Game.Classes
 {
     public class GameInterface
     {
@@ -22,9 +20,8 @@ namespace MasterMind.Classes
                 case 4:
                     Console.WriteLine($"You win! You did it in {10 - tries} tries.");
                     Console.ReadLine();
-                    //TODO: This is why it's not exiting after a win?
-                    MainMenu m = new MainMenu();
-                    m.DisplayMainMenu();
+                    MainMenu mm = new MainMenu();
+                    mm.DisplayMainMenu();
                     break;
             }
 
@@ -32,8 +29,8 @@ namespace MasterMind.Classes
             {
                 Console.WriteLine($"\nNice try but you lose!");
                 Console.ReadLine();
-                MainMenu m = new MainMenu();
-                m.DisplayMainMenu();
+                MainMenu mm = new MainMenu();
+                mm.DisplayMainMenu();
             }
         }
 
@@ -79,7 +76,6 @@ namespace MasterMind.Classes
 
                 }
             }
-
             return inputArr;
         }
     }

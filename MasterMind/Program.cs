@@ -1,7 +1,7 @@
 ﻿using System;
-using MasterMind.Classes;
+using Game.Classes;
 
-namespace MasterMind
+namespace Game
 {
     public class Program
     {

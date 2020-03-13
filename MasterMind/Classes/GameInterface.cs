@@ -4,6 +4,12 @@ namespace Game.Classes
 {
     public class GameInterface
     {
+        /// <summary>
+        /// Prompts user on how they are doing. If they have won or lost, let the game know so it can end.
+        /// </summary>
+        /// <param name="matches">How many positions the user has correct</param>
+        /// <param name="tries">Number of tries the user has left</param>
+        /// <returns>bool isWinLose</returns>
         public void PrintWinLose(int matches, int tries)
         {
             switch (matches)
@@ -19,36 +25,40 @@ namespace Game.Classes
                     break;
                 case 4:
                     Console.WriteLine($"You win! You did it in {10 - tries} tries.");
-                    Console.ReadLine();
-                    MainMenu mm = new MainMenu();
-                    mm.DisplayMainMenu();
                     break;
             }
 
-            if (tries == 0) //Out of guesses
+            //Out of guesses
+            if (tries == 0) 
             {
                 Console.WriteLine($"\nNice try but you lose!");
-                Console.ReadLine();
-                MainMenu mm = new MainMenu();
-                mm.DisplayMainMenu();
             }
         }
 
+        /// <summary>
+        /// Show + and - for how well the guess matches the solution
+        /// </summary>
         public void PrintFeedback(string feedback)
         {
             Console.WriteLine("Code: " + feedback);
         }
 
+        /// <summary>
+        /// Get guess from the user. Includes validation.
+        /// </summary>
         public int[] GetGuess()
         {
 
             int[] inputArr = new int[4];
 
+            // Start validation loop
+            // Keep prompting for guess until 4 numbers between 1-6 are entered 
             bool invalidInput = true;
             while (invalidInput)
             {
                 Console.Write("\nWhat's your guess? ");
                 string input = Console.ReadLine();
+
                 if (input.Length != 4) //Wrong length
                 {
                     Console.WriteLine("Try again. It's 4 digits long. (Example guess: 1234)");
@@ -73,7 +83,6 @@ namespace Game.Classes
                         }
                         invalidInput = false;
                     }
-
                 }
             }
             return inputArr;

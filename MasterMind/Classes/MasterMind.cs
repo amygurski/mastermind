@@ -13,6 +13,10 @@ namespace Game.Classes
             this.GI = gi;
         }
 
+        /// <summary>
+        /// Play the game. 
+        /// Gets the solution and gives the user NumberOfTries times to guess
+        /// </summary>
         public void Play()
         {
             int[] guess;
@@ -22,8 +26,13 @@ namespace Game.Classes
             {
                 guess = GI.GetGuess();
                 NumberOfTries--;
-                int result = CheckGuess(guess, solution);
-                GI.PrintWinLose(result, NumberOfTries);
+                int result = CheckGuess(guess, solution); //Get how well the guess matches the solution
+                GI.PrintWinLose(result, NumberOfTries); //Let the user know how they are doing
+                //If all 4 numbers match, they win so break out of play loop
+                if (result == 4)
+                {
+                    break;
+                }
             }
         }
 
@@ -38,15 +47,15 @@ namespace Game.Classes
 
             for (int i = 0; i < guess.Length; i++) //For each number in guess
             {
-
-                if (guess[i] == modifiedSolution[i])
+                //Check if guess has same position and value as solution
+                if (guess[i] == modifiedSolution[i]) 
                 {
                     feedback = feedback.Insert(0, "+"); //+'s get printed first
                     fourToWin++;
                     modifiedSolution[i] = 0;
                     continue;
                 }
-                else
+                else //check if guess has same value as a number in the solution, but in a different position
                 {
                     for (int j = 0; j < modifiedSolution.Length; j++) //For each number in solution
                     {
@@ -60,11 +69,15 @@ namespace Game.Classes
                 }
             }
 
-            GI.PrintFeedback(feedback);
+            GI.PrintFeedback(feedback); //Have game interface print the + and - code indicating how they did
 
             return fourToWin;
         }
 
+        /// <summary>
+        /// Generate the solution, which is a 4 digit random number
+        /// Each number is 1-6
+        /// </summary>
         static int[] GenerateSecretCode()
         {
             int[] fourRandomNumbers = new int[4];
@@ -76,11 +89,11 @@ namespace Game.Classes
             return fourRandomNumbers;
         }
 
+        //Get a random number
         public static int RandomNumber(int min, int max)
         {
             Random random = new Random();
             return random.Next(min, max);
         }
-
     }
 }

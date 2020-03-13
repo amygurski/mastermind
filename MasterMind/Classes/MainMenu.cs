@@ -6,6 +6,7 @@ namespace Game.Classes
     {
         public void DisplayMainMenu()
         {
+            // Create the menu loop
             bool keepGoing = true;
             while (keepGoing)
             {
@@ -20,11 +21,13 @@ namespace Game.Classes
                 switch (input)
                 {
                     case "1":
+                        //Display instructions
                         Console.Clear(); 
                         Title();
                         PrintInstructions();
                         break;
                     case "2":
+                        //Play game
                         Console.Clear(); 
                         Title();
                         Console.WriteLine("\nI have a number in mind...");
@@ -32,14 +35,16 @@ namespace Game.Classes
                         game.Play();
                         break;
                     case "3":
+                        //Exit
                         keepGoing = false;
-                        Environment.Exit(0);
-                        break;
+                        continue;
                     //TODO: Case 4: View stats (plays, wins losses)
                     default:
                         Console.WriteLine("Invalid Menu Option. Please try again.");
                         break;
                 }
+
+                //Wait for user to press enter before continuing
                 Console.ReadLine();
             }
         }
